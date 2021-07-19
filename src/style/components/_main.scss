@@ -1,0 +1,16 @@
+.main{
+  padding: 3rem 0;
+  @include center;
+  .main__inner{
+    width: 90%;
+  }
+
+}
+
+.main_mode_light{
+  background: $lightMode_bg;
+}
+
+.main_mode_dark{
+  background: $darkMode_bg;
+}

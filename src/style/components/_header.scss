@@ -1,0 +1,23 @@
+.header{
+  @include center;
+
+  .header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .header__button{
+    display: none;
+  }
+
+  .header__button_visible{
+    display: flex;
+  }
+}
+
+.header_mode_light{
+  background: $lightMode_elements;
+  box-shadow: 0px 2px 4px darken($lightMode_bg, 10%);
+}

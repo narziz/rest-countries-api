@@ -1,0 +1,24 @@
+.theme-button{
+  @include center;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  height: fit-content;
+
+  .theme-button__icon{
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    @include center;
+  }
+}
+
+.theme-button_mode_light{
+  background: $lightMode_elements;
+  color: $lightMode_text;
+}
+.theme-button_mode_dark{
+  background: $darkMode_elements;
+  color: $darkMode_text;
+}

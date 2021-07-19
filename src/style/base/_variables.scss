@@ -1,0 +1,17 @@
+// ---- COLORS ----
+// ---- dark mode ----
+$darkMode_bg: hsl(207, 26%, 17%);
+$darkMode_elements: hsl(209, 23%, 22%);
+$darkMode_text: hsl(0, 0%, 100%);
+// $darkMode_shadow: 0 0 10px darken($lightMode_bg, 10%);
+
+// ---- light mode ----
+$lightMode_bg: hsl(0, 0%, 98%);
+$lightMode_elements: hsl(0, 0%, 100%);
+$lightMode_text: hsl(200, 15%, 8%);
+$lightMode_input: hsl(0, 0%, 52%);
+$lightMode_shadow: 0 0 10px darken($lightMode_bg, 10%);
+
+// ---- SCREENS ----
+$mobile: 375px;
+$desktop: 1440px;
