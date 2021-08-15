@@ -1,0 +1,49 @@
+.country-details{
+    .country-details__info-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 3rem;
+        margin-inline: -2rem;
+    }
+
+    .country-details__section{
+        width: 50%;
+        padding-inline: 2rem;
+    }
+
+    .country-details__section_info{
+        padding-block: 2rem;
+    }
+
+    .country-details__image{
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .country-details__details-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    .country-details__title{
+        margin-bottom: 1.5rem;
+    }
+    .country-details__text{
+        margin-bottom: 0.5rem;
+    }
+
+    .country-details__border-container{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .country-details__border-text{
+        margin-right: 0.5rem;
+    }
+
+    .country-details__button_border{
+        margin-inline: 0.5rem;
+    }
+}

@@ -1,33 +1,26 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
  class Card extends Component {
-   constructor(props){
-      super(props);
-      this.state = {
-          data: this.props.countryData
-      }
-
-      console.log('from child --> ', this.state.data);
-  }
    render() {
+     let country = this.props.countryData;
+
      return (
-       
+
        <div className="cards__item card">
          <div className="card__inner card__inner_mode_light">
-            <div className="card__image-container">
-              <a href="#">
-                <img className="card__image" src="https://restcountries.eu/data/usa.svg" />
-              </a>
-            </div>
+            <Link key={country.alpha3Code} to={`/country/${country.name}`}>
+               <div className="card__image-container">
+                  <img className="card__image" src={country.flag} alt={country.name}/>
+               </div>
 
-            <div className="card__description">
-              <a href="#">
-                <h3 className="card__title">{}</h3>
-              </a>
-              <p className="card__details"><strong>Population:</strong> 81.770.845</p>
-              <p className="card__details"><strong>Region:</strong> America</p>
-              <p className="card__details"><strong>Capital:</strong> New York</p>
-            </div>
+               <div className="card__description">
+                <h3 className="card__title">{country.name}</h3>
+                 <p className="card__details"><strong>Population:</strong> {country.population}</p>
+                 <p className="card__details"><strong>Region:</strong> {country.region}</p>
+                 <p className="card__details"><strong>Capital:</strong> {country.capital}</p>
+               </div>
+            </Link>
          </div>
        </div>
      )

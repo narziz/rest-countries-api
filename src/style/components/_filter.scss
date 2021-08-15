@@ -14,13 +14,16 @@
     position: relative;
     justify-content: flex-start;
 
+  .filter__form{
+    position: absolute;
+    width: 70%;
+  }
 
     .filter__input{
-      position: absolute;
       padding: 0.7rem 1rem 0.7rem 3rem;
       border-radius: 0.3rem;
       border: none;
-      width: 70%;
+      width: 100%;
       box-shadow: $lightMode_shadow;
     }
 
