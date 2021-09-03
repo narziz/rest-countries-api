@@ -3,6 +3,12 @@ import Header from "./components/header";
 import Routes from './config/routes';
 
 class App extends Component {
+  // constructor(){
+  //   this.state = {
+  //     theme: 'light'
+  //   }
+  // }
+
   render(){
     return (
         <div className="container-fluid">

@@ -36,14 +36,20 @@
 
     .country-details__border-container{
         display: flex;
-        align-items: center;
+        // align-items: center;
         margin-top: 2rem;
+    }
+    .country-details__border-details{
+        display: flex;
+        flex-wrap: wrap;
     }
     .country-details__border-text{
         margin-right: 0.5rem;
+        width: 50%;
     }
 
     .country-details__button_border{
         margin-inline: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 }
