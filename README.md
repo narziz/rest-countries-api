@@ -8,7 +8,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 * [Webpack](https://webpack.js.org/concepts/) - An open-source JavaScript module bundler
 
 ## Preview
-To view site [Click Here](https://todo-app-vue-js.vercel.app/)
+To view site [Click Here](https://rest-countries-api-brown.vercel.app/)
 
 ## Getting Started
 
