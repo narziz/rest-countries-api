@@ -8,13 +8,15 @@ import axios from 'axios';
       super(props);
       this.state = {
           data: [],
-          inputVal: ''
+          inputVal: '',
+          theme: props.theme
       }
-
+      
       this.handleInput = this.handleInput.bind(this);
       this.handleSelect = this.handleSelect.bind(this);
 
   }
+  
    componentDidMount(){
      axios.get('https://restcountries.eu/rest/v2/all')
      .then(res => {
@@ -62,10 +64,10 @@ import axios from 'axios';
 
    render() {
      return (
-       <main className="main main_mode_light">
+       <main className={`main main_mode_${this.state.theme}`}>
           <div className="main__inner">
-            <Filter sendInputValue={this.handleInput} sendSelectValue={this.handleSelect} />
-            <Cards data={this.state.data} />
+            <Filter theme={this.state.theme} sendInputValue={this.handleInput} sendSelectValue={this.handleSelect} />
+            <Cards theme={this.state.theme} data={this.state.data} />
           </div>
        </main>
      )

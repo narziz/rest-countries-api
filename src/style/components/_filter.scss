@@ -26,7 +26,20 @@
       border-radius: 0.3rem;
       border: none;
       width: 100%;
+    }
+    .filter__input__light{
+      background: $lightMode_elements;
+      color: $lightMode_text;
+    }
+    .filter__input__dark{
+      background: $darkMode_elements;
+      color: $darkMode_text;
+    }
+    .filter__input__shadow-light{
       box-shadow: $lightMode_shadow;
+    }
+    .filter__input__shadow-dark{
+      box-shadow: $darkMode_shadow;
     }
 
     .filter__icon{
@@ -35,7 +48,12 @@
       z-index: 1;
       font-size: 1rem;
     }
-
+    .filter__icon__light{
+      color: $lightMode_text
+    }
+    .filter__icon__dark{
+      color: $darkMode_text
+    }
     .filter__icon_position_left{
       margin-left: 1rem;
     }
@@ -48,8 +66,26 @@
       padding: 0.7rem 1rem 0.7rem 1rem;
       border-radius: 0.3rem;
       border: none;
+    }
+
+    .filter__select__light{
+      background: $lightMode_elements;
+      color: $lightMode_text;
+    }
+
+    .filter__select__dark{
+      background: $darkMode_elements;
+      color: $darkMode_text;
+    }
+
+    .filter__select__shadow-light{
       box-shadow: $lightMode_shadow;
     }
+
+    .filter__select__shadow-dark{
+      box-shadow: $darkMode_shadow;
+    }
+
   }
 
 }

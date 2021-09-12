@@ -31,12 +31,27 @@
   }
 }
 
-.card__inner_mode_light{
+.card__inner__mode_light{
   background: $lightMode_elements;
 }
 
-.card__inner_mode_light__shadow{
+.card__inner__mode_dark{
+  background: $darkMode_elements;
+}
+
+.card__inner__shadow-light{
   box-shadow: $lightMode_shadow;
+}
+
+.card__inner__shadow-dark{
+  box-shadow: $darkMode_shadow;
+}
+
+.cart__text__light{
+  color: $lightMode_text
+}
+.cart__text__dark{
+  color: $darkMode_text
 }
 
 @media (min-width: 1440px) {

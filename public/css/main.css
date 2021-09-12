@@ -71,10 +71,21 @@ body {
     display: none; }
   .header .header__button_visible {
     display: flex; }
+  .header .theme-button__icon,
+  .header .theme-button__text {
+    pointer-events: none; }
+  .header .header__title__mode-light {
+    color: #111517; }
+  .header .header__title__mode-dark {
+    color: white; }
 
 .header_mode_light {
   background: white;
-  box-shadow: 0px 2px 4px #e0e0e0; }
+  box-shadow: 0 0 10px #e0e0e0; }
+
+.header_mode_dark {
+  background: #2b3945;
+  box-shadow: 0 0 10px #0d1216; }
 
 .main {
   padding: 3rem 0;
@@ -114,8 +125,17 @@ body {
     padding: 0.7rem 1rem 0.7rem 3rem;
     border-radius: 0.3rem;
     border: none;
-    width: 100%;
+    width: 100%; }
+  .filter .filter__container_input .filter__input__light {
+    background: white;
+    color: #111517; }
+  .filter .filter__container_input .filter__input__dark {
+    background: #2b3945;
+    color: white; }
+  .filter .filter__container_input .filter__input__shadow-light {
     box-shadow: 0 0 10px #e0e0e0; }
+  .filter .filter__container_input .filter__input__shadow-dark {
+    box-shadow: 0 0 10px #0d1216; }
   .filter .filter__container_input .filter__icon {
     display: flex;
     justify-content: center;
@@ -123,6 +143,10 @@ body {
     position: absolute;
     z-index: 1;
     font-size: 1rem; }
+  .filter .filter__container_input .filter__icon__light {
+    color: #111517; }
+  .filter .filter__container_input .filter__icon__dark {
+    color: white; }
   .filter .filter__container_input .filter__icon_position_left {
     margin-left: 1rem; }
 
@@ -131,8 +155,17 @@ body {
   .filter .filter__container_select .filter__select {
     padding: 0.7rem 1rem 0.7rem 1rem;
     border-radius: 0.3rem;
-    border: none;
+    border: none; }
+  .filter .filter__container_select .filter__select__light {
+    background: white;
+    color: #111517; }
+  .filter .filter__container_select .filter__select__dark {
+    background: #2b3945;
+    color: white; }
+  .filter .filter__container_select .filter__select__shadow-light {
     box-shadow: 0 0 10px #e0e0e0; }
+  .filter .filter__container_select .filter__select__shadow-dark {
+    box-shadow: 0 0 10px #0d1216; }
 
 @media (min-width: 768px) {
   .filter .filter__inner {
@@ -181,11 +214,23 @@ body {
   .card .card__details {
     margin-bottom: 0.2rem; }
 
-.card__inner_mode_light {
+.card__inner__mode_light {
   background: white; }
 
-.card__inner_mode_light__shadow {
+.card__inner__mode_dark {
+  background: #2b3945; }
+
+.card__inner__shadow-light {
   box-shadow: 0 0 10px #e0e0e0; }
+
+.card__inner__shadow-dark {
+  box-shadow: 0 0 10px #0d1216; }
+
+.cart__text__light {
+  color: #111517; }
+
+.cart__text__dark {
+  color: white; }
 
 @media (min-width: 1440px) {
   .card {
