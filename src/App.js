@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import Header from "./components/header";
 import Routes from './config/routes';
-import { ThemeProvider } from './config/themeContext'
+import ThemeContext, { ThemeProvider } from './context/ThemeContext';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      theme: 'light'
+      // theme: 'light'
     }
 
     this.handleThemeChange = this.handleThemeChange.bind(this);
@@ -15,16 +15,16 @@ class App extends Component {
 
   handleThemeChange(data){
     console.log('theme is changing...', data);
-    this.setState({
-      theme: data
-    });
+    // this.setState({
+    //   theme: data
+    // });
   }
 
   render(){
     return (
         <div className="container-fluid">
-          <Header theme={this.state.theme} changeTheme={this.handleThemeChange} />
-          <ThemeProvider value={this.state.theme}>
+          <ThemeProvider>
+            <Header />
             <Routes />
           </ThemeProvider>
         </div>

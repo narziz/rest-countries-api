@@ -1,47 +1,25 @@
 import React, { Component } from 'react';
+import ThemeContext from '../context/ThemeContext';
 
 class Header extends Component{
- 
-  constructor(props){
-    super(props);
-    this.state = {
-      currentTheme: props.theme
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(event){
-    console.log(event.target);
-
-    if(this.state.currentTheme == 'light'){
-      this.setState({
-        currentTheme: 'dark'
-      })
-    } else {
-      this.setState({
-        currentTheme: 'light'
-      })
-    }
-    console.log(`this.state.currentTheme --->>> ${this.state.currentTheme}`);
-    this.props.changeTheme(this.state.currentTheme)
-
-  }
+  static contextType = ThemeContext;
 
   render(){
+    const {theme, updateTheme } = this.context;
+
     return (
-      <header className={`header header_mode_${this.state.currentTheme}`}>
+      <header className={`header header_mode_${theme}`}>
         <div className="header__inner">
-          <h2 className={`header__title header__title__mode-${this.state.currentTheme}`}>Where in the world?</h2>
-          { this.state.currentTheme == 'light' ? 
-            <button onClick={this.handleClick} className="header__button header__button_visible theme-button theme-button_mode_light">
+          <h2 className={`header__title header__title__mode-${theme}`}>Where in the world?</h2>
+          { theme == 'light' ? 
+            <button onClick={updateTheme} className="header__button header__button_visible theme-button theme-button_mode_light">
               <i className="theme-button__icon" >
                 <ion-icon name="sunny-outline"></ion-icon>
               </i>
               <span className="theme-button__text">Light Mode</span>
             </button>
           :
-            <button onClick={this.handleClick} className="header__button header__button_visible theme-button theme-button_mode_dark">
+            <button onClick={updateTheme} className="header__button header__button_visible theme-button theme-button_mode_dark">
               <i className="theme-button__icon" >
                 <ion-icon name="moon"></ion-icon>
               </i>
