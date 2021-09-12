@@ -1,15 +1,15 @@
 .country-details{
     .country-details__info-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
         padding-top: 3rem;
-        margin-inline: -2rem;
+        // margin-inline: -2rem;
     }
 
     .country-details__section{
-        width: 50%;
-        padding-inline: 2rem;
+        width: 100%;
+        // padding-inline: 2rem;
     }
 
     .country-details__section_info{
@@ -18,13 +18,14 @@
 
     .country-details__image{
         width: 100%;
-        height: 20rem;
+        height: 15rem;
         object-fit: cover;
         object-position: center;
     }
     
     .country-details__details-info{
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
     .country-details__title{
@@ -34,8 +35,13 @@
         margin-bottom: 0.5rem;
     }
 
+    .country-details__info_secondary{
+        margin-top: 2rem;
+    }
+
     .country-details__border-container{
         display: flex;
+        flex-direction: column;
         // align-items: center;
         margin-top: 2rem;
     }
@@ -44,12 +50,53 @@
         flex-wrap: wrap;
     }
     .country-details__border-text{
-        margin-right: 0.5rem;
-        width: 50%;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 
     .country-details__button_border{
-        margin-inline: 0.5rem;
+        // margin-inline: 0.5rem;
+        margin-right: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    .country-details__light-mode-shadow{
+        box-shadow: $lightMode_shadow;
+    }
+    .country-details__dark-mode-shadow{
+        box-shadow: $darkMode_shadow;
+    }
+}
+
+@media (min-width: 1024px) {
+    .country-details{
+        .country-details__info-container{
+            flex-direction: row;
+            margin-inline: -2rem;
+        }
+    
+        .country-details__section{
+            width: 50%;
+            padding-inline: 2rem;
+        }
+    
+        .country-details__details-info{
+            flex-direction: row;
+        }
+        .country-details__border-container{
+            flex-direction: row;
+        }
+    
+        .country-details__border-text{
+            margin-right: 0.5rem;
+            margin-bottom: unset;
+            width: 50%;
+        }
+        .country-details__info_secondary{
+            margin-top: unset;
+        }
+        .country-details__image{
+            height: 20rem;
+        }
     }
 }

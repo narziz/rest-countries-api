@@ -4,6 +4,13 @@
     padding-top: 3rem;
     margin-inline: -1rem;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px){
+  .cards .cards_inner{
+    flex-direction: row;
   }
 }

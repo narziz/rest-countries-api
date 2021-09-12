@@ -22,3 +22,11 @@
   background: $darkMode_elements;
   color: $darkMode_text;
 }
+
+
+.theme-button__light-mode-shadow{
+  box-shadow: $lightMode_shadow;
+}
+.theme-button__dark-mode-shadow{
+  box-shadow: $darkMode_shadow;
+}

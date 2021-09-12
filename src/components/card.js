@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
      return (
 
        <div className="cards__item card">
-         <div className="card__inner card__inner_mode_light">
+         <div className="card__inner card__inner_mode_light card__inner_mode_light__shadow">
             <Link key={country.alpha3Code} to={`/country/${country.name}`}>
                <div className="card__image-container">
                   <img className="card__image" src={country.flag} alt={country.name}/>

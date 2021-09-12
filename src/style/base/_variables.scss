@@ -3,7 +3,7 @@
 $darkMode_bg: hsl(207, 26%, 17%);
 $darkMode_elements: hsl(209, 23%, 22%);
 $darkMode_text: hsl(0, 0%, 100%);
-// $darkMode_shadow: 0 0 10px darken($lightMode_bg, 10%);
+$darkMode_shadow: 0 0 10px darken($darkMode_bg, 10%);
 
 // ---- light mode ----
 $lightMode_bg: hsl(0, 0%, 98%);

@@ -12,7 +12,7 @@ class Header extends Component{
 
   render(){
     return (
-      <div className="header header_mode_light">
+      <header className="header header_mode_light">
         <div className="header__inner">
           <h2 className="header__title">Where in the world?</h2>
           <button onClick={this.handleClick} className="header__button header__button_visible theme-button theme-button_mode_light">
@@ -28,7 +28,7 @@ class Header extends Component{
             <span className="theme-button__text">Dark Mode</span>
           </button>
         </div>
-      </div>
+      </header>
     )
   }
 }

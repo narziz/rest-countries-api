@@ -97,7 +97,7 @@ class CardDetails extends Component  {
         const borderList = this.state.bordersName.map((item, index) => {
             return (
                 <Link key={index + 1} to={`/country/${item}`}>
-                    <button className="country-details__button country-details__button_border theme-button theme-button_mode_light">
+                    <button className="country-details__button country-details__button_border theme-button theme-button_mode_light theme-button__light-mode-shadow">
                         <span className="theme-button__text">{item}</span>
                     </button>
                 </Link>
@@ -119,7 +119,7 @@ class CardDetails extends Component  {
                     <div className="main__inner country-details">
                         <div className="country-details__button-container">
                             <Link to={'/'}>
-                                <button className="country-details__button theme-button theme-button_mode_light">
+                                <button className="country-details__button theme-button theme-button_mode_light theme-button__light-mode-shadow">
                                     <i className="theme-button__icon" >
                                         <ion-icon name="arrow-back-outline"></ion-icon>
                                     </i>
@@ -129,7 +129,7 @@ class CardDetails extends Component  {
                         </div>
                         <div className="country-details__info-container">
                             <div className="country-details__section country-details__section_image">
-                                <img className="country-details__image" src={this.state.country.flag} />
+                                <img className="country-details__image country-details__light-mode-shadow" src={this.state.country.flag} />
                             </div>
                             <div className="country-details__section country-details__section_info">
                                 <h1 className="country-details__title">{this.state.country.name}</h1>
