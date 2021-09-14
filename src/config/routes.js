@@ -1,23 +1,17 @@
-import React, { useContext } from 'react';
-import { Route, Switch } from "react-router-dom";
+import React, { useState, useContext } from 'react';
+import { Route, Switch, useHistory } from "react-router-dom";
 import CardDetails from "../containers/cardDetails";
 import Main from '../containers/main';
-import ThemeContext, { ThemeProvider } from '../context/themeContext';
 
-const Routes = () => {
-    // console.log('useContext --- ', useContext(ThemeContext));
-    // const { theme, updateTheme } = useContext(ThemeContext);
-    // console.log('----', theme);
+
+const Routes = (props) => {
     return (
         <Switch>
             <Route exact path="/" component={() => {
-                return (
-                    <ThemeProvider>
-                        <Main />
-                    </ThemeProvider>)
+                return  <Main theme={props.theme} />
             }}  />
-            <Route path="/country/:name" component={props => {
-                return <CardDetails {...props} />
+            <Route path="/country/:name" component={prop => {
+                return <CardDetails theme={props.theme} {...prop} />
             }} />
         </Switch>
     )

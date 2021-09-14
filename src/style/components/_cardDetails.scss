@@ -66,6 +66,13 @@
     .country-details__dark-mode-shadow{
         box-shadow: $darkMode_shadow;
     }
+
+    .country-details__text__light{
+        color: $lightMode_text;
+    }
+    .country-details__text__dark{
+        color: $darkMode_text;
+    }
 }
 
 @media (min-width: 1024px) {

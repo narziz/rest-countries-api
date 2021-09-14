@@ -305,6 +305,12 @@ body {
 .country-details .country-details__dark-mode-shadow {
   box-shadow: 0 0 10px #0d1216; }
 
+.country-details .country-details__text__light {
+  color: #111517; }
+
+.country-details .country-details__text__dark {
+  color: white; }
+
 @media (min-width: 1024px) {
   .country-details .country-details__info-container {
     flex-direction: row;

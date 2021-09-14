@@ -10,7 +10,8 @@ class CardDetails extends Component  {
             name: props.match.params.name,
             country: {},
             borders: [],
-            bordersName: []
+            bordersName: [],
+            theme: props.theme
         }
     }
 
@@ -78,6 +79,7 @@ class CardDetails extends Component  {
 
 
     render(){
+        console.log('from Details >>> ', this.state.theme);
         let currencyList, languageList, borders;
     
         if(typeof(this.state.country.currencies) != 'undefined') {
@@ -97,7 +99,7 @@ class CardDetails extends Component  {
         const borderList = this.state.bordersName.map((item, index) => {
             return (
                 <Link key={index + 1} to={`/country/${item}`}>
-                    <button className="country-details__button country-details__button_border theme-button theme-button_mode_light theme-button__light-mode-shadow">
+                    <button className={`country-details__button country-details__button_border theme-button theme-button_mode_${this.props.theme} theme-button__${this.props.theme}-mode-shadow`}>
                         <span className="theme-button__text">{item}</span>
                     </button>
                 </Link>
@@ -106,7 +108,7 @@ class CardDetails extends Component  {
 
         if (this.state.bordersName.length > 0) {
             borders =   <div className="country-details__border-container">
-                            <p className="country-details__border-text"><strong>Border Countries:</strong></p>
+                            <p className={`country-details__border-text country-details__text__${this.state.theme}`}><strong>Border Countries:</strong></p>
                             <div className="country-details__border-details">
                                 { borderList }
                             </div>
@@ -115,11 +117,11 @@ class CardDetails extends Component  {
 
         return (
             <div>
-                <main className="main main_mode_light">
+                <main className={`main main_mode_${this.state.theme}`}>
                     <div className="main__inner country-details">
                         <div className="country-details__button-container">
                             <Link to={'/'}>
-                                <button className="country-details__button theme-button theme-button_mode_light theme-button__light-mode-shadow">
+                                <button className={`country-details__button theme-button theme-button_mode_${this.state.theme} theme-button__${this.state.theme}-mode-shadow`}>
                                     <i className="theme-button__icon" >
                                         <ion-icon name="arrow-back-outline"></ion-icon>
                                     </i>
@@ -129,22 +131,22 @@ class CardDetails extends Component  {
                         </div>
                         <div className="country-details__info-container">
                             <div className="country-details__section country-details__section_image">
-                                <img className="country-details__image country-details__light-mode-shadow" src={this.state.country.flag} />
+                                <img className={`country-details__image country-details__${this.state.theme}-mode-shadow`} src={this.state.country.flag} />
                             </div>
                             <div className="country-details__section country-details__section_info">
-                                <h1 className="country-details__title">{this.state.country.name}</h1>
+                                <h1 className={`country-details__title country-details__text__${this.state.theme}`}>{this.state.country.name}</h1>
                                 <div className="country-details__details-info">
                                     <div className="country-details__info country-details__info_primary">
-                                        <p className="country-details__text"><strong>Native Name:</strong> {this.state.country.nativeName}</p>
-                                        <p className="country-details__text"><strong>Polulation:</strong> {this.state.country.population}</p>
-                                        <p className="country-details__text"><strong>Region:</strong> {this.state.country.region}</p>
-                                        <p className="country-details__text"><strong>Sub Region:</strong> {this.state.country.subregion}</p>
-                                        <p className="country-details__text"><strong>Capital:</strong> {this.state.country.capital}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Native Name:</strong> {this.state.country.nativeName}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Polulation:</strong> {this.state.country.population}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Region:</strong> {this.state.country.region}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Sub Region:</strong> {this.state.country.subregion}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Capital:</strong> {this.state.country.capital}</p>
                                     </div>
                                     <div className="country-details__info country-details__info_secondary">
-                                        <p className="country-details__text"><strong>Top Level Domain:</strong> {this.state.country.topLevelDomain}</p>
-                                        <p className="country-details__text"><strong>Currency:</strong> { currencyList }</p>
-                                        <p className="country-details__text"><strong>Languages:</strong> {languageList}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Top Level Domain:</strong> {this.state.country.topLevelDomain}</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Currency:</strong> { currencyList }</p>
+                                        <p className={`country-details__text country-details__text__${this.state.theme}`}><strong>Languages:</strong> {languageList}</p>
                                     </div>
                                 </div>
                                 { borders }

@@ -2,17 +2,15 @@ import React, {Component} from 'react';
 import Filter from "../components/fltr";
 import Cards from "./cards";
 import axios from 'axios';
-import ThemeContext from '../context/themeContext';
 
  class Main extends Component {
-   static contextType = ThemeContext;
 
    constructor(props){
       super(props);
       this.state = {
           data: [],
           inputVal: '',
-          // theme: props.theme
+          theme: props.theme
       }
       
       this.handleInput = this.handleInput.bind(this);
@@ -65,23 +63,13 @@ import ThemeContext from '../context/themeContext';
 
    }
 
-   shouldComponentUpdate(){
-     return true
-   }
-
-   componentDidUpdate(){
-     console.log('oofff >>> ', this.context);
-   }
-
    render() {
-     const { theme, updateTheme } = this.context
-     console.log('hohoho ', theme);
-     console.log('hohoho ', updateTheme);
+     console.log('from MAINs props >>> ', this.state.theme);
      return (
-       <main className={`main main_mode_${theme}`}>
+       <main className={`main main_mode_${this.state.theme}`}>
           <div className="main__inner">
-            <Filter theme={theme} sendInputValue={this.handleInput} sendSelectValue={this.handleSelect} />
-            <Cards theme={theme} data={this.state.data} />
+            <Filter theme={this.state.theme} sendInputValue={this.handleInput} sendSelectValue={this.handleSelect} />
+            <Cards theme={this.state.theme} data={this.state.data} />
           </div>
        </main>
      )
