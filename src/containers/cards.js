@@ -10,7 +10,7 @@ import Card from '../components/card';
    }
 
    render() {
-     const cardList = this.props.data.map(item => <Card theme={this.state.theme} key={item.alpha3Code} countryData={item}/>)
+     const cardList = this.props.data.map(item => <Card theme={this.state.theme} key={item.cca3} countryData={item}/>)
      return (
        <div className="cards">
           <div className="cards_inner">

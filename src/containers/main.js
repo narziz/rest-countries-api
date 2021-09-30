@@ -19,8 +19,9 @@ import axios from 'axios';
   }
   
    componentDidMount(){
-     axios.get('https://restcountries.eu/rest/v2/all')
+     axios.get('https://restcountries.com/v3.1/all')
      .then(res => {
+       console.log(res);
        let data = res.data;
        this.setState({ data })
      })
@@ -31,9 +32,9 @@ import axios from 'axios';
      let url;
 
      if (value != '') {
-       url = `https://restcountries.eu/rest/v2/name/${value}`
+       url = `https://restcountries.com/v3.1/name/${value}`
      } else {
-       url = 'https://restcountries.eu/rest/v2/all'
+       url = 'https://restcountries.com/v3.1/all'
      }
 
      axios.get(url)
@@ -49,9 +50,9 @@ import axios from 'axios';
      let url;
 
     if (region == 'Select the region') {
-      url = 'https://restcountries.eu/rest/v2/all'
+      url = 'https://restcountries.com/v3.1/all'
     } else {
-      url = `https://restcountries.eu/rest/v2/region/${region}`
+      url = `https://restcountries.com/v3.1/region/${region}`
     }
 
     axios.get(url)
